@@ -16,9 +16,16 @@ public class PropertyServiceImpl implements PropertyService{
 	
 	@Override
 	public PropertyDTO saveProperty(PropertyDTO propertyDTO) {
-//		PropertyEntity pe = new PropertyEntity();
-//		pe.setTitle(propertyDTO.getTitle());
-//		propertyRepository.save();
+		PropertyEntity pe = new PropertyEntity();
+		pe.setTitle(propertyDTO.getTitle());
+		pe.setAddress(propertyDTO.getAddress());
+		pe.setOwnerEmail(propertyDTO.getOwnerEmail());
+		pe.setOwnerName(propertyDTO.getOwnerName());
+		pe.setPrice(propertyDTO.getPrice());
+		pe.setDescription(propertyDTO.getDescription());
+		
+		
+		propertyRepository.save(pe);
 		return null;
 	}
 
